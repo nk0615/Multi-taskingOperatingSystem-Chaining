@@ -95,36 +95,7 @@ public class Chaining {
     }
     
 
-    /* This delete() function was replaced by the deleteByCode()
-     * because after taking care of the constraint that the interface 
-     * can only accept a string or a number, the new delete function accepts a priority code now.
-     * 
-     * Hence, this block of code became trivial.
-     * 
-     * (It is not a good practice to comment code. However, this makes more sense to me so I want to keep it)
-     * 
-     public boolean delete(Node task) {
-	Node n = chainTable[task.priorityCode % 11];
-
-	if (n == null) {
-	    return false;
-	}
-	
-	if (n == task) {
-	    chainTable[task.priorityCode] = n.next;
-	    return true;
-	}
-	
-	while (n.next != null) {
-	    if (n.next == task) {
-		n.next = n.next.next;
-		return true;
-	    }
-	    
-	    n = n.next;
-	}
-	return false;
-    }*/
+    
     
     // prints all the tasks in process with their names & priority code
     public void listAllProcess() {
@@ -197,58 +168,6 @@ public class Chaining {
    	reader.close();
     }
         	
-	
-	/*Node T00 = new Node("firefox");
-	Node T01 = new Node("Itunes");
-	Node T02 = new Node("chrome");
-	Node T03 = new Node("IE");
-	Node T04 = new Node("Edge");
-	Node T05 = new Node("Sublime");
-	Node T06 = new Node("League");
-	Node T07 = new Node("messenger");
-	Node T08 = new Node("Calendar");
-	Node T09 = new Node("Timer");
-	Node T10 = new Node("MS word");
-	Node T11 = new Node("MS Excel");
-	Node T12 = new Node("Safari");
-	Node T13 = new Node("IntelliJ");
-	Node T14 = new Node("Eclipse");
-	Node T15 = new Node("Visual Studio");
-	Node T16 = new Node("Setting");
-	Node T17 = new Node("Preview");
-	Node T18 = new Node("MS PPT");
-	Node T19 = new Node("NotePad");
-	//Node T20 = new Node("Reminders");
-	
-	chain.insert(T00);
-	chain.insert(T01);
-	chain.insert(T02);
-	chain.insert(T03);
-	chain.insert(T04);
-	chain.insert(T05);
-	chain.insert(T06);
-	chain.insert(T07);
-	chain.insert(T08);
-	chain.insert(T09);
-	chain.insert(T10);
-	chain.insert(T11);
-	chain.insert(T12);
-	chain.insert(T13);
-	chain.insert(T14);
-	chain.insert(T15);
-	chain.insert(T16);
-	chain.insert(T17);
-	chain.insert(T18);
-	chain.insert(T19);
-	//c.insert(T20);
-	
-	chain.listAllProcess();
-	System.out.println("----");
-	if(chain.delete(T19))
-	chain.listAllProcess();
-	System.out.println("----");
-	System.out.println(chain.search(16));
-	*/
-    }
+}
 
 
